@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  cloudflare-ddns:
+    image: connermo/cloudflare-ddns-py:latest
+    container_name: cloudflare-ddns
+    restart: unless-stopped
+    volumes:
+      - ./config.ini:/config/config.ini:ro
+    environment:
+      - UPDATE_INTERVAL=300 

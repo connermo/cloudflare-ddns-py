@@ -1,0 +1,21 @@
+[cloudflare]
+# Authentication Method 1: Using API Token (Recommended)
+# Create from Cloudflare Dashboard:
+# My Profile > API Tokens > Create Token
+# Requires "Zone.DNS" edit permissions
+api_token = your_api_token_here
+
+# Domain Configuration Section
+[domain:ddns.example.com]
+# Zone ID (Required)
+zone_id = your_zone_id_here
+record_type = A
+ttl = 1
+proxied = false
+
+[domain:home.example.com]
+# Zone ID (Required)
+zone_id = your_zone_id_here
+record_type = A
+ttl = 1
+proxied = true
